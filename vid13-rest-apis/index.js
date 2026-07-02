@@ -26,7 +26,7 @@ app.get('/api/users/:id', (req, res) => {
     return res.json(user);
 })
 
-app.post('/api/users/:id', (req, res) => {
+app.post('/api/users/', (req, res) => {
     // TODO: Create new user
     return res.json({ status: 'Pending' });
 })
