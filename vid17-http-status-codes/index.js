@@ -8,6 +8,7 @@ const PORT = 8000;
 // Middlewares
 app.use(express.urlencoded({ extended: false }));
 
+// Custom Middleware
 app.use((req, res, next) => {
     fs.appendFile('./logs.txt', `${new Date().toLocaleString()} - ${req.ip} - ${req.method}: ${req.path}\n`, (err) => {
         if (err) {
