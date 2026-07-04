@@ -12,7 +12,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/myDb-1')
     .catch((err) => console.log('Connection error: ', err));
 
 // Schema
-const userSchema = mongoose.Schema(
+const userSchema = new mongoose.Schema(
     {
         firstName: {
             type: String,
